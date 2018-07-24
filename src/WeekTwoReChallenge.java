@@ -18,9 +18,6 @@ public class WeekTwoReChallenge {
     Boolean itemStatus;
 
 
-
-
-    int itemPriority;
     String itemConcern = "";
 
     int totalChores = 0;
@@ -38,9 +35,10 @@ public class WeekTwoReChallenge {
     Scanner scan = new Scanner(System.in);
     Random rand = new Random();
 
+        int itemPriority = 1+ rand.nextInt(3);
+
     //USER INPUT
 
-    //while (!userInput.equalsIgnoreCase("quit")) {
 
       while (!(userInput.equalsIgnoreCase("quit") || !(!userInput.equalsIgnoreCase("q")))){
         printout("Enter the item you have to do: ");
@@ -49,8 +47,8 @@ public class WeekTwoReChallenge {
         printout("Enter the category of this item: ");
         itemCat = scan.next();
 
-        printout("Your assigned priority is: ");
-        itemPriority = scan.nextInt();
+        //printout("Your assigned priority is: ");
+        //itemPriority = scan.nextInt();
 
         printout("Is this item completed? (true or false): ");
         itemStatus = scan.nextBoolean();
